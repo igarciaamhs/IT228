@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bounty of Yum</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav class="nav">
+            <div class="container">
+                <input type="checkbox" id="nav__checkbox" class="nav__checkbox">
+                <label for="nav__checkbox" class="nav__toggle">
+                    <img src="images/menu--v1.png" class="hamburger" />
+                    <img src="images/x.png" class="close" />
+                </label>
+                <ul class="nav__menu">
+                    <li><a href="index.html"><img src="images/logo.png" /></a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="local-vendors.html">Local Vendors</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" data-aos="fade-up">
+        <div class="overlay">
+            <div class="container">
+                <div class="caption">
+                    <h1>Discover Local Flavors</h1>
+                    <p>Dive into a culinary adventure as you discover hidden gems and beloved favorites. From food trucks to farmers’ markets, find the freshest and most delicious offerings right in your neighborhood. Support local businesses and savor the unique flavors they bring to the table.</p>
+                    <a href="local-vendors.html" class="cta-button">Explore Vendors</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" data-aos="fade-up">
+        <div class="container">
+            <div class="row">
+                <div class="content">
+                    <h2>About Our Local Vendors</h2>
+                    <p>At Bounty of Yum, we’re passionate about celebrating local flavors. Our mission is simple: promote local food and all the goodness it brings. Here’s why we believe in it:</p>
+                    <br>
+                    <p>1. Environmentally Friendly: By supporting local producers, we reduce food miles and minimize our carbon footprint. It’s our small way of nurturing the planet we call home.</p>
+                    <br>
+                    <p>2. Healthier Choices: Fresh, seasonal ingredients from nearby farms mean better nutrition for you and your loved ones. We’re all about wholesome, farm-to-table goodness.</p>
+                    <br>
+                    <p>3. Empowering Communities: When you choose local, you’re directly supporting independent businesses. It’s like a warm hug for your neighborhood!</p>
+                </div>
+                <div class="image">
+                    <img src="images/vendors.jpg" alt="Vendors">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product List with Search -->
+    <section class="flavors-list" data-aos="fade-up">
+        <div class="container">
+            <div class="heading">
+                <h2>Flavors Items</h2>
+                <input type="text" id="search-input" onkeyup="searchProducts()" placeholder="Search products..." />
+            </div>
+            <div id="product-list" class="row">
+                <!-- Products will be dynamically inserted here via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart Section -->
+    <section class="cart-section">
+        <div class="container">
+            <h3>Shopping Cart</h3>
+            <div id="cart-items">
+                <!-- Cart items will be dynamically inserted here -->
+            </div>
+            <p id="cart-total">Total: $0.00</p>
+
+            <hr class="separator">
+
+            <div id="checkout">
+                <button id="checkout-button" onclick="showLoginModal()">Checkout</button>
+            </div>
+            <div id="checkout-summary" style="display: none;">
+                <h2>Checkout Summary</h2>
+                <div id="summary-items"></div>
+                <p id="summary-total"></p>
+            </div>   
+
+            <hr class="separator">
+
+                    <!-- Login Modal -->
+            <div id="login-modal" style="display: none;">
+                <div class="modal-content">
+                    <h3>Login to Checkout</h3>
+                    <form onsubmit="return login(event)">
+                        <input type="text" id="username" placeholder="Username" required>
+                        <input type="password" id="password" placeholder="Password" required>
+                        <button type="submit">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+        
+
+    <script>
+        // Functions for login modal
+        function showLoginModal() {
+            document.getElementById('login-modal').style.display = 'block';
+        }
+
+        function login(event) {
+            event.preventDefault(); // Prevent form submission
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (username && password) {
+                alert(`Welcome, ${username}! Proceeding to checkout.`);
+                closeLoginModal();
+            } else {
+                alert('Please enter both username and password.');
+            }
+        }
+
+        function closeLoginModal() {
+            document.getElementById('login-modal').style.display = 'none';
+        }
+    </script>
+
+
+
+    <!-- Contact Info Section -->
+    <section class="contact-info" data-aos="fade-up">
+        <div class="container">
+            <div class="row">
+                <div class="image">
+                    <img src="images/FarmersMarket.jpg" alt="Farmers Market">
+                    <img src="images/logo.png" alt="Bounty of Yum Logo">
+                </div>
+                <div class="content">
+                    <h2>Contact Info</h2>
+                    <p>We're here to help! If you have any questions or need more information about Bounty of Yum, please feel free to reach out. We're excited to connect with you and support our local community together.
+                    </p>
+                    <h3>Email</h3>
+                    <p>info@example.com</p>
+                    <h3>Phone</h3>
+                    <p>+1 234 567 8910</p>
+                    <h3>Address</h3>
+                    <p>1028 New Mexico 48, New York</p>
+                    <h3>Follow</h3>
+                    <div class="follow-icon">
+                        <div class="item">
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        </div>
+                        <div class="item">
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                        <div class="item">
+                            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Bounty of Yum | All rights reserved</p>
+    </footer>
+
+    <!-- JavaScript Link -->
+    <script src="js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

@@ -1,0 +1,994 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand|Spectral');
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+.container{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+h1{
+    margin: 0;
+    padding: 0;
+}
+h2{
+    margin: 0;
+    padding: 0;
+}
+h3{
+    margin: 0;
+    padding: 0;
+}
+p{
+    margin: 0;
+    padding: 0;
+}
+
+header nav{
+    background: #EEFFDA;
+    padding: 10px 0;
+}
+header nav {
+    border-bottom: 1px solid #f1f1f1;
+  }
+header nav .nav__toggle {
+    position: absolute;
+    cursor: pointer;
+    margin: 27px 28px;
+    right: 0;
+}
+  
+header nav .close,
+input[type="checkbox"] {
+    display: none;
+}
+header nav .hamburger {
+    margin-top: 0.2rem;
+}
+header nav .nav__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    margin: 0;
+    padding-left: 0;
+}
+header nav .nav__menu img{
+    width: 100px;
+}
+header nav li {
+    list-style: none;
+    display: none;
+ }
+ header nav li:first-child {
+    margin-right: auto;
+    display: block;
+}
+header nav .nav__menu a {
+    text-decoration: none;
+    color: initial;
+    font-size: 1.2rem;
+}
+header nav .nav__menu a:hover{
+    color: #F58634;
+}
+header nav #nav__checkbox:checked ~ ul.nav__menu li {
+    display: block;
+}
+header nav #nav__checkbox:checked ~ label.nav__toggle .hamburger {
+    display: none;
+}
+header nav #nav__checkbox:checked ~ label.nav__toggle .close {
+    display: block;
+}
+  
+@media only screen and (min-width: 768px) {
+    header nav .nav__toggle {
+      display: none;
+    }
+    header nav .nav__menu {
+      flex-direction: row;
+    }
+    header nav .nav__menu li {
+      display: block;
+    }  
+}
+  
+.vendor-hero {
+    background: url('../images/market-outsideVendor.jpg');
+    background-size: cover;
+    height: 500px;
+    margin-bottom: 10px;
+    margin: 0; 
+    padding: 0;
+    overflow: hidden;
+}
+.vendor-hero + section {
+    margin-top: 0; /* Remove top margin from the next section */
+    padding-top: 20px; /* Add a little padding if needed */
+}
+
+.hero-section{
+    background: url('../images/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 700px;
+}
+.hero-section .overlay{
+    background: rgba(0,0,0,0.5);
+    height: 700px;
+}
+.hero-section .caption{
+    max-width: 700px;
+    padding-top: 220px;
+}
+.hero-section .caption h1{
+    font-size: 70px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+.hero-section .caption p{
+    font-size: 20px;
+    line-height: 1.5em;
+    color: #fff;
+    margin: 0;
+    margin-top: 20px;
+    padding: 0;
+}
+.about-section{
+    margin-top: 100px;
+}
+
+.about-section .row{
+    display: flex;
+}
+.about-section .content{
+    width: 50%;
+    padding-right: 30px;
+}
+.about-section .content h2{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.about-section .content p{
+    font-size: 18px;
+    line-height: 1.5em;
+}
+.about-section .image{
+    width: 50%;
+}
+.about-section .image img{
+    width: 100%;
+}
+
+.flavors-list{
+    background: #f1f1f1;
+    padding: 80px 0;
+    margin-top: 70px;
+}
+.flavors-list .heading h2{
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.flavors-list .row{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+.flavors-list .card{
+    background: #fff;
+    border: 1px solid #ddd;
+}
+.flavors-list .card img{
+    width: 100%;
+}
+.flavors-list .card h2{
+    font-size: 20px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+.contact-info{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.contact-info .row{
+    display: flex;
+}
+.contact-info .image{
+    width: 50%;
+}
+.contact-info .image img{
+    width: 80%;
+}
+.contact-info .content{
+    width: 50%;
+}
+.contact-info .content h2{
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.contact-info .content h3{
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+.contact-info .content p{
+    font-size: 18px;
+    line-height: 1.5em;
+}
+.contact-info .content .follow-icon{
+    display: flex;
+    margin-top: 20px;
+}
+.contact-info .content .follow-icon .item{
+    margin-right: 20px;
+    height: 50px;
+    width: 50px;
+    background: #227f00;
+    text-align: center;
+}
+.contact-info .content .follow-icon .item:hover{
+    background: #cafbdf;
+}
+.contact-info .content .follow-icon .item a{
+    padding: 10px;
+    border-radius: 50%;
+}
+.contact-info .content .follow-icon .item .fa-brands{
+    color: #fff;
+    font-size: 20px;
+   padding: 15px 0;
+}
+footer p{
+    background: #070706;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    padding: 20px 15px;
+}
+
+
+/* Contact page css */
+.contact {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.contact .contact-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.contact .contact-content .column{
+    width: calc(50% - 30px);
+}
+.contact .contact-content .text{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.contact .contact-content .left p{
+    text-align: justify;
+}
+.contact .contact-content .left .icons{
+    margin: 10px 0;
+}
+.contact .contact-content .row{
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+.contact .contact-content .row .info{
+    margin-left: 30px;
+}
+.contact .contact-content .row i{
+    font-size: 25px;
+    color: #008037;
+}
+.contact .contact-content .info .head{
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.contact .contact-content .info .sub-title{
+    color: #333;
+}
+.contact .right form .fields{
+    display: flex;
+}
+.contact .right form .field,
+.contact .right form .fields .field{
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.contact .right form .name {
+    margin-right: 10px;
+}
+.contact .right form .textarea{
+    height: 80px;
+    width: 100%;
+}
+.contact .right form .name{
+    margin-right: 10px;
+}
+.contact .right form .field input,
+.contact .right form .textarea textarea{
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+.contact .right form .field input:focus,
+.contact .right form .textarea textarea:focus{
+    border-color: #008037;
+}
+.contact .right form .textarea textarea{
+  padding-top: 10px;
+  resize: none;
+}
+.contact .right form .button-area{
+  display: flex;
+  align-items: center;
+}
+.contact .right form button{
+    display: inline-block;
+    font-size: 16px;
+    text-align: center;
+    padding: 15px 25px;
+    background: #008037;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+.contact-page .container{
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+/* Local Vendors Section */
+.vendor-section {
+    
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.section-heading {
+    font-size: 28px;
+    color: #2e7d32; 
+    margin-bottom: 20px;
+}
+
+.section-description {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+/* Vendor Cards Grid */
+.vendor-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Individual Vendor Card */
+.vendor-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vendor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.vendor-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.vendor-card h3 {
+    font-size: 20px;
+    color: #2e7d32;
+    margin-bottom: 10px;
+}
+
+.vendor-card p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.vendor-card .button {
+    display: inline-block;
+    background-color: #008037;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.vendor-card .button:hover {
+    background-color: #005f28;
+}
+
+
+/* Local vendor page css */
+.vendor-hero{
+    background: url("../images/female-customer-reaching-food-from-vendor.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    height: 400px;
+}
+.vendor-section{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.vendor-section .row{
+    display: flex;
+}
+.vendor-section .content{
+    width: 50%;
+    padding-right: 30px;
+}
+.vendor-section .content h2{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.vendor-section .content p{
+    font-size: 18px;
+    line-height: 1.5em;
+}
+.vendor-section .image{
+    width: 50%;
+}
+.vendor-section .image img{
+    width: 100%;
+}
+
+
+
+/* Define primary and secondary colors */
+:root {
+    --primary-color: #008037; 
+    --secondary-color: #F58634; 
+    --text-color: #333;
+    --background-color: #ffffff;
+    --font-family: 'Quicksand', sans-serif;
+}
+
+/* Update body styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+/* Update heading styles */
+h1, h2, h3 {
+    font-family: 'Spectral', serif;
+    color: var(--primary-color);
+}
+
+/* Update link styles */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+/* Update navigation menu styles */
+header nav .nav__menu a {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    padding: 10px 15px;
+}
+
+header nav .nav__menu a:hover {
+    color: var(--secondary-color);
+    background-color: #f1f1f1;
+    border-radius: 5px;
+}
+
+
+/* Error styles */
+.contact-form input.error, .contact-form textarea.error {
+    border-color: #e63946;
+}
+
+#form-messages {
+    margin-top: 10px;
+}
+
+#form-messages p {
+    color: #e63946;
+    font-weight: bold;
+}
+
+#form-messages p.success {
+    color: #008037;
+}
+
+
+/* Style for CTA Button */
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background-color: var(--secondary-color);
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #d9752c;
+}
+
+
+.cart-item button {
+    background-color: #e63946;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-left: 10px;
+}
+
+.cart-item button:hover {
+    background-color: #c53030;
+}
+
+@media screen and (max-width: 767px) {
+    header nav .nav__menu img {
+        padding-left: 15px;
+    }
+    
+    .hero-section{
+        height: 450px;
+    }
+    .hero-section .overlay{
+        height: 450px;
+    }
+    .hero-section .caption{
+        padding: 15px;
+        padding-top: 100px;
+        box-sizing: border-box;
+        
+    }
+    .hero-section .caption h1{
+        font-size: 35px;
+    }
+    .about-section{
+        padding: 15px;
+        margin-top: 50px;
+        box-sizing: border-box;
+    }
+    .about-section .row{
+        display: block;
+    }
+    .about-section .content{
+        width: 100%;
+        padding-right: 0;
+    }
+    
+    .about-section .image{
+        width: 100%;
+    }
+    .about-section .image img{
+        margin-top: 20px;
+    }
+    .flavors-list{
+        margin-top: 50px;
+        padding: 50px 15px;
+        box-sizing: border-box;
+    }
+    .flavors-list .row{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .contact-info{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+    .contact-info .row{
+        display: block;
+    }
+    .contact-info .image{
+        width: 100%;
+    }
+    .contact-info .content{
+        width: 100%;
+    }
+    .contact-info .image img{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .vendor-hero{
+        height: 250px;
+    }
+    .vendor-section {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        padding: 15px;
+    }
+    .vendor-section .content{
+        padding-right: 0;
+    }
+    .vendor-section .row{
+        display: block;
+    }
+    .vendor-section .content{
+        width: 100%;
+    }
+    .vendor-section .image{
+        width: 100%;
+    }
+    .vendor-section .image img{
+        margin-top: 20px;
+    }
+    .contact{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+    .contact .title{
+        font-size: 30px;
+        margin-bottom: 30px;
+        margin-top: 0;
+        text-align: center;
+    }
+    .contact .contact-content{
+        display: block;
+    }
+    .contact .contact-content .column{
+        width: 100%;
+    }
+    .contact-form{
+        margin-top: 30px;
+    }
+    .contact .contact-content .text{
+        font-size: 20px;
+    }
+
+    .vendor-profile .container {
+    text-align: left;
+}
+}
+
+.vendor-profile h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.product-list {
+    display: flex;
+    gap: 20px;
+}
+
+.product-list .card {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    width: 200px;
+}
+.vendor-profile .container {
+    text-align: left;
+}
+
+.vendor-profile h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.product-list {
+    display: flex;
+    gap: 20px;
+}
+
+.product-list .card {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    width: 200px;
+}
+
+/* Flavors List Section */
+.flavors-list {
+    background-color: #e8f5e9; 
+    padding: 60px 20px; 
+    margin-top: 30px;
+}
+
+
+
+/* Section Heading */
+.flavors-list .heading h2 {
+    color: #2e7d32; 
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px; 
+
+/* Search Bar */
+#search-input {
+    display: block;
+    margin: 0 auto 40px; 
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 400px; 
+
+/* Product List and Card Styling */
+.flavors-list .card {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.flavors-list .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.flavors-list .card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-bottom: 2px solid #2e7d32; 
+    margin-bottom: 15px;
+}
+
+.flavors-list .card h2 {
+    font-size: 22px;
+    color: #2e7d32; 
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.flavors-list .card p {
+    font-size: 18px;
+    color: #4caf50; 
+    margin: 5px 0 15px; 
+}
+
+.flavors-list .card button {
+    background-color: #008037; 
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin: 5px;
+}
+
+.flavors-list .card button:hover {
+    background-color: #005f28;
+}
+}
+
+
+/* Cart Section Styling */
+.cart-section {
+    background: #f9f9f9;
+    padding: 40px 0;
+    margin-top: 50px;
+}
+
+.cart-section h3 {
+    font-size: 20px;
+    color: #2e7d32; 
+    margin-bottom: 15px; 
+    font-weight: bold;
+}
+
+#cart-items {
+    margin-bottom: 20px;
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    max-width: 400px;
+}
+
+#cart-items .cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+#cart-items .cart-item p {
+    margin: 0;
+    font-size: 18px;
+}
+
+#cart-total {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
+}
+
+/* Checkout button */
+#checkout {
+    text-align: center; 
+    margin: 30px auto;  
+    max-width: 300px;   
+}
+
+#checkout-button {
+    display: inline-block;
+    background-color: #008037;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+#checkout-summary {
+    font-size: 16px;
+    padding: 20px;
+    background: #ffffff; 
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+#checkout-button:hover {
+    background-color: #005f28;
+}
+/* Log in button */
+#login-modal {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    z-index: 1000; 
+}
+
+#login-modal .modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#login-modal input {
+    width: 90%; 
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#login-modal button {
+    background-color: #008037;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#login-modal button:hover {
+    background-color: #005f28;
+}
+r
+
+/* Search Input Styling */
+#search-input {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+#search-input:focus {
+    border-color: #008037;
+}
+
+/* Contact Form Validation Styling */
+.contact-form input:invalid,
+.contact-form textarea:invalid {
+    border-color: #e63946;
+}
+
+.contact-form input:focus:invalid,
+.contact-form textarea:focus:invalid {
+    border-color: #e63946;
+}
+
+.contact-form input:focus:valid,
+.contact-form textarea:focus:valid {
+    border-color: #008037;
+}
+
+
+/* Responsive Adjustments */
+@media screen and (max-width: 767px) {
+    .flavors-list .row {
+        grid-template-columns: 1fr;
+    }
+
+    #search-input {
+        max-width: 100%;
+    }
+
+    #cart-items {
+        max-width: 100%;
+    }
+}
+
+
+}
+
+
+
